@@ -1,0 +1,15 @@
+<body>
+    <div class="login">
+      
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" [(ngModel)]="email" name="email" id="email" required>
+  
+      <hr>
+  
+      <button type="submit"  class="loginbtn">Login</button>
+  </form>
+  <button (click)="register()"  class="registerbtn">Registration</button>
+    </div>
+  </body>

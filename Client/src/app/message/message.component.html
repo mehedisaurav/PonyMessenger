@@ -1,0 +1,85 @@
+<body>
+  <div class="header">
+    <div class="header-right">
+      <a href="javascript:void(0)" (click)="Logout()">
+        <span class="label warning" >Logout</span>
+      </a>
+    </div>
+  </div>
+    <div class="chatbox">
+        <div class="messaging">
+              <div class="inbox_msg">
+                <div class="inbox_people">
+                  <div class="headind_srch">
+                    <div class="recent_heading">
+                      <h4>{{userName}}</h4>
+                    </div>
+                    <!-- <div class="srch_bar">
+                      <div class="stylish-input-group">
+                        
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="inbox_chat">
+                    <div class="chat_list active_chat" *ngFor="let item of userList">
+                      <a (click)="chatWithUser(item)">
+                        <div class="chat_people" >
+                          <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                          <div class="chat_ib">
+                            <h5>{{item.firstName}}</h5>                            
+                            <h6>{{item.email}}</h6>
+                          </div>                          
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mesgs" (click)="onLeftClick(-1)">
+                  <div class="msg_container">
+                    <div >
+                      <div *ngFor="let msg of msgList; let i = index ">
+                        <div class="incoming_msg" *ngIf="msg.receiverId !== receiver ; else outgoing">
+                          <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                          <div class="received_msg">
+                            <div class="received_withd_msg" (contextmenu)="onRightClick($event,i)" >
+                              <a href="javascript:void(0)" (click)="deleteMeMsg(msg)" *ngIf="i == selectMsg && !msg.isDeleted">
+                                <span class="label danger" >Delete For Me</span>
+                              </a>
+                              <p *ngIf="!(msg.isDeletedByReceiver || msg.isDeletedAll)">{{msg.text}}</p>
+                              <p *ngIf="(msg.isDeletedByReceiver || msg.isDeletedAll)"></p>
+                              <span class="time_date">{{msg.textTime | date: 'dd/MM/yyyy hh:mm'}}</span></div>
+                          </div>
+                        </div>
+                        <ng-template #outgoing>
+                          <div class="outgoing_msg" (contextmenu)="onRightClick($event,i)" >
+                            <div class="sent_msg" >
+                              <a href="javascript:void(0)" (click)="deleteMeMsg(msg)" *ngIf="i == selectMsg && !msg.isDeleted">
+                                <span class="label danger" >Delete For Me</span>
+                              </a>
+                              <a href="javascript:void(0)" (click)="deleteAllMsg(msg)" *ngIf="i == selectMsg && !msg.isDeleted">
+                                <span class="label danger" >Delete For All</span>
+                              </a>
+                              <p *ngIf="!(msg.isDeletedBySender || msg.isDeletedAll)">{{msg.text}}</p>
+                              <p *ngIf="(msg.isDeletedBySender || msg.isDeletedAll)"></p>
+                              <span class="time_date">{{msg.textTime | date: 'dd/MM/yyyy hh:mm'}}</span> </div>
+                          </div>
+                        </ng-template>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="type_msg">
+                    <div class="input_msg_write">
+                      <input type="text" [(ngModel)]="message" class="write_msg" placeholder="Type a message">
+                      <button (click)="sendMsg(message)" class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true">send</i></button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              
+            </div></div>
+</body> 
+ 
+ 
+ 
+ 
+

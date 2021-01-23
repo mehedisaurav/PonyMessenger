@@ -1,0 +1,88 @@
+.container {
+    background-color: white;
+    max-width: 50%;
+    margin: auto;
+  }
+  body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#ffffff;  
+    font-family: 'Arial';  
+}
+.login{  
+  width: 382px;  
+  overflow: hidden;  
+  margin: auto;  
+  margin: 20 0 0 450px;  
+  padding: 80px;  
+  background: #23463f;  
+  border-radius: 15px ;  
+    
+} 
+  
+  /* Full-width input fields */
+  input[type=text] {
+    width: -webkit-fill-available;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  
+  .loginbtn {
+    background-color: #7c8ebe;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .loginbtn:hover {
+    opacity: 1;
+  }
+
+  .registerbtn {
+    background-color: #53da69;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  b{
+    color: #ffffff;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }

@@ -1,0 +1,41 @@
+<body>
+  <div class="registration">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <label for="firstName"><b>First Name</b></label>
+      <input
+        type="text"
+        placeholder="Enter First Name"
+        [(ngModel)]="userModel.FirstName"
+        name="firstName"
+        id="firstName"
+        required
+      />
+
+      <label for="lastName"><b>Last Name</b></label>
+      <input
+        type="text"
+        placeholder="Enter Last Name"
+        [(ngModel)]="userModel.lastName"
+        name="lastName"
+        id="lastName"
+        required
+      />
+
+      <label for="email"><b>Email</b></label>
+      <input
+        type="text"
+        placeholder="Enter Email"
+        [(ngModel)]="userModel.email"
+        name="email"
+        id="email"
+        required
+      />
+
+      <hr />
+
+      <button type="submit" class="registerbtn">Register</button>
+    </form>
+
+    <button (click)="cancel()" class="cancelbtn">Cancel</button>
+  </div>
+</body>
