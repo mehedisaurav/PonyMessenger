@@ -44,7 +44,8 @@ type `Add-Migration "<migration_name>"`
 #### Client
 * Open your visual studio code and open the client folder of PonyMessenger,
 * After open client open the terminal by option menu or type "ctrl+`"
-* Into the terminal type `ng serve` for run the client side or build for production type `ng build --prod`
+* A terminal will open on the bottom side of VS code. Run command `npm install` on terminal to install the packages. (This may take some time)
+* After that type `ng serve` for run the client side or build for production type `ng build --prod`
 * Open your browser then browse `localhost:4200` when `ng serve` done
 
 ##### This project run both server and client paralleli to be functional
