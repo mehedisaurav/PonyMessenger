@@ -7,6 +7,7 @@ I have used [.NET CORE 2.2](https://dotnet.microsoft.com/download/visual-studio-
 * ASP.NET Web API 
 * Entity Framework Core
 * [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019) and [SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15) (no need to install if already installed)
+* SignalR (for real-time notification)
 
 ## Git
 Download [git](https://git-scm.com/downloads) then install it for cloning the repo.
